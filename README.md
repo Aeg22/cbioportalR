@@ -69,6 +69,10 @@ install.packages("cbioportalR")
 Install the development version of {cbioportalR} with:
 
 ``` r
+# Install this fork:
+remotes::install_github("aeg22/cbioportalR")
+
+# Install the developer's current:
 remotes::install_github("karissawhiting/cbioportalR")
 ```
 
