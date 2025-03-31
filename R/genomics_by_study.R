@@ -75,9 +75,9 @@
   # this text goes in query URL path
   url_data_type <- switch(
     data_type,
-    "mutation" = "mutations",
+    "mutation" = "mutations?",
     "fusion" = "structural-variant",
-    "cna" = "discrete-copy-number",
+    "cna" = "discrete-copy-number?discreteCopyNumberEventType=ALL&",
     "segment" = "copy-number-segments")
 
   # Some API endpoints require that you pass a sample list ID. All studies should have an "all" list which is the default for this function
@@ -94,7 +94,7 @@
       "molecular-profiles/", molecular_profile_id,
       "/",
       url_data_type,
-      "?sampleListId=",
+      "sampleListId=",
       sample_list_id
     )
 
